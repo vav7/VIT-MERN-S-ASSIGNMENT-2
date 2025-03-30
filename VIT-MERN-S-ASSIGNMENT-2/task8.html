@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh;
+        }
+
+        .registration-form {
+            width: 800px;
+            background: ;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        h2 {
+            color: #007bff;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            width: 200px;
+            font-weight: bold;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        
+        .options {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .declaration {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .declaration input {
+            margin-right: 8px;
+        }
+
+        #registerButton {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        #registerButton:hover {
+            background-color: #c0392b;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-form">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="Enter your first name">
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Enter your last name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Re-enter Password</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm your password">
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="options">
+                    <label><input type="radio" name="gender" value="male" checked> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" placeholder="Enter your age">
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" placeholder="Enter your address"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" placeholder="Enter your state">
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country">
+                    <option value="">Choose your country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Languages Known</label>
+                <div class="options">
+                    <label><input type="checkbox" name="language" value="English"> English</label>
+                    <label><input type="checkbox" name="language" value="Kannada"> Kannada</label>
+                    <label><input type="checkbox" name="language" value="Hindi"> Hindi</label>
+                    <label><input type="checkbox" name="language" value="Telugu"> Telugu</label>
+                </div>
+            </div>
+
+            <div class="declaration">
+                <input type="checkbox" id="declaration" required>
+                <label for="declaration">Hereby I declare all the given details are true</label>
+            </div>
+
+            <button type="submit" id="registerButton">REGISTER</button>
+        </form>
+
+        <div class="login-link">
+            <a href="#" target="_blank">Log in to Ethnus website</a>
+        </div>
+    </div>
+</body>
+</html>

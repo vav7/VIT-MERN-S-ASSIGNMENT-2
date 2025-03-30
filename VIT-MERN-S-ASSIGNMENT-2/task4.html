@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Date and Time</title>
+</head>
+<body>
+    <h2>Show Date and Time</h2>
+    <button onclick="showDate()">Show Date</button>
+    <p id="dateOutput"></p>
+    
+    <button onclick="showTime()">Show Time</button>
+    <p id="timeOutput"></p>
+
+    <script>
+        function showDate() {
+            let today = new Date();
+            let formattedDate = today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
+            document.getElementById("dateOutput").innerText = formattedDate;
+        }
+
+        function showTime() {
+            let now = new Date();
+            document.getElementById("timeOutput").innerText = now;
+        }
+    </script>
+</body>
+</html>

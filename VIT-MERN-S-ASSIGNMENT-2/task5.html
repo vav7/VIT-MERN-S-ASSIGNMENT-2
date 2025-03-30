@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <style>
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h2>Form Validation</h2>
+    <form onsubmit="return validateForm()">
+        Name: <input type="text" id="name"> <span class="error" id="nameError"></span><br><br>
+        Email: <input type="email" id="email"> <span class="error" id="emailError"></span><br><br>
+        Website: <input type="url" id="website"> <span class="error" id="websiteError"></span><br><br>
+        Message: <textarea id="message"></textarea> <span class="error" id="messageError"></span><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+            
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("websiteError").innerText = "";
+            document.getElementById("messageError").innerText = "";
+
+            if (document.getElementById("name").value.trim() === "") {
+                document.getElementById("nameError").innerText = "This field is required";
+                isValid = false;
+            }
+            
+            let email = document.getElementById("email").value;
+            if (!email.match(/^\S+@\S+\.\S+$/)) {
+                document.getElementById("emailError").innerText = "A valid email address is required";
+                isValid = false;
+            }
+
+            let website = document.getElementById("website").value;
+            if (!website.match(/^(https?:\/\/)?([\w\d-]+\.)+\w{2,}\/?$/)) {
+                document.getElementById("websiteError").innerText = "A valid URL is required";
+                isValid = false;
+            }
+
+            if (document.getElementById("message").value.trim() === "") {
+                document.getElementById("messageError").innerText = "This field is required";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>

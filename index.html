@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSTask</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Global Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Title Styling */
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+        }
+
+        /* Info Box Styling */
+        .info-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .info-box p {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Task Table Styling */
+        .task-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        .task-table th, .task-table td {
+            padding: 15px;
+            text-align: center;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .task-table th {
+            background: #007bff;
+            font-size: 1.5rem;
+        }
+
+        .task-table td {
+            background: rgba(255, 255, 255, 0.2);
+            font-size: 1.05rem;
+        }
+
+        /* Button  Shine Effect */
+        .task-table a {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .task-table a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.4);
+            transform: skewX(-30deg);
+            transition: 0.5s;
+            z-index: -1;
+        }
+
+        .task-table a:hover::before {
+            left: 100%;
+        }
+
+        /* Button Background Colors */
+        .btn-red { background: #e74c3c; }
+        .btn-blue { background: #3498db; }
+        .btn-green { background: #2ecc71; }
+        .btn-yellow { background: #f39c12; }
+        .btn-purple { background: #9b59b6; }
+
+
+        .assignment-link {
+            margin-top: 30px;
+        }
+
+        .assignment-link a {
+            background: #ff5733;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            animation: float 2s infinite ease-in-out;
+            transition: background-color 0.3s ease;
+        }
+
+        .assignment-link a:hover {
+            background: #c70039;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MERN Internship Assignment 2</h1>
+        <!-- Separate Info Boxes -->
+        <div class="info-box">
+            <p><strong>Name:</strong> Vaibhav Kumar</p>
+        </div>
+        <div class="info-box">
+            <p><strong>Reg:</strong> 22BCY10023</p>
+        </div>
+        <div class="info-box">
+            <p><strong>VIT EMAIL ID:</strong> vaibhavkumar2022@vitbhopal.ac.in</p>
+        </div>
+        <table class="task-table">
+            <tr>
+                <th>JS Task</th>
+                <th>Link</th>
+            </tr>
+            <tr><td>Task 1</td><td><a href="VIT-MERN-S-ASSIGNMENT-2/task1.html" class="btn-red">Go to Task 1</a></td></tr>
+<tr><td>Task 2</td><td><a href="VIT-MERN-S-ASSIGNMENT-2/task2.html" class="btn-blue">Go to Task 2</a></td></tr>
+<tr><td>Task 3</td><td><a href="VIT-MERN-S-ASSIGNMENT-2/task3.html" class="btn-green">Go to Task 3</a></td></tr>
+<tr><td>Task 4</td><td><a href="VIT-MERN-S-ASSIGNMENT-2/task4.html" class="btn-yellow">Go to Task 4</a></td></tr>
+<tr><td>Task 5</td><td><a href="VIT-MERN-S-ASSIGNMENT-2/task5.html" class="btn-purple">Go to Task 5</a></td></tr>
+<tr><td>Task 6</td><td><a href="VIT-MERN-S-ASSIGNMENT-2/task6.html" class="btn-blue">Go to Task 6</a></td></tr>
+<tr><td>Task 7</td><td><a href="VIT-MERN-S-ASSIGNMENT-2/task7.html" class="btn-red">Go to Task 7</a></td></tr>
+<tr><td>Task 8</td><td><a href="VIT-MERN-S-ASSIGNMENT-2/task8.html" class="btn-green">Go to Task 8</a></td></tr>
+<tr><td>Task 9</td><td><a href="VIT-MERN-S-ASSIGNMENT-2/task9/index.html" class="btn-purple">Go to Task 9</a></td></tr>
+
+        </table>
+        <div class="assignment-link">
+            <a href="https://vit-mernstack-internship-a1.netlify.app/" target="_blank">Go to Assignment 1</a>
+        </div>
+    </div>
+</body>
+</html>
